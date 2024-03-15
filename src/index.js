@@ -18,11 +18,8 @@ app.listen(3000,async()=>{
     //   });
 
      const tweetsRepo=new TweetRepository();
-     const tweet=await tweetsRepo.create({content:'Tweet with coment schema'});
-     const com=await tweetsRepo.getWithComments(({content:'new comment'}));
-     tweet.comments.push(com);
-     console.log(tweet);
-     await tweet.save();
      
+     const tweet=await tweetsRepo.getAll(2,5);
+    
      console.log(tweet);
 });
