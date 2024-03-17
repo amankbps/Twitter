@@ -22,5 +22,11 @@ const tweetSchema=new mongoose.Schema(
     }
 );
 
+tweetSchema.pre('save',function(next) {
+      console.log('inside the hooks');
+      this.content=this.content+'.......';
+      next();
+});
+
 const Tweet=mongoose.model('Tweet',tweetSchema);
 module.exports=Tweet;

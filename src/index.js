@@ -19,7 +19,8 @@ app.listen(3000,async()=>{
 
      const tweetsRepo=new TweetRepository();
      
-     const tweet=await tweetsRepo.getAll(2,5);
-    
+     const tweet=await tweetsRepo.create({content:'testing hooks'});
      console.log(tweet);
+    
+    
 });
