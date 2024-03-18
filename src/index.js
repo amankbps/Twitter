@@ -13,7 +13,7 @@ app.listen(3000,async()=>{
     console.log("mongodb connected");
 
     let ser=new service();
-    await ser.create({content:"done with #refctor"});
+    //await ser.create({content:"remove #HASHTAG"});
      
     
 });
