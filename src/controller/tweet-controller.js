@@ -6,7 +6,9 @@ export const createTweet=async(req,res)=>{
 
     try 
      {
+        
          const response=await tweetService.create(req.body);
+        
          return res.status(201).json({
             success:true,
             message:'Successfully created a new tweet',
@@ -21,7 +23,7 @@ export const createTweet=async(req,res)=>{
             success:false,
             message:'something went wrong',
             data:{},
-            err:err
+            err:error
 
          });
      }
@@ -47,7 +49,7 @@ export const getTweet=async(req,res)=>{
           success:false,
           message:'something went wrong',
           data:{},
-          err:err
+          err:error
 
        });
    }
